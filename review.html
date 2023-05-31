@@ -11,16 +11,17 @@
     content='ie=edge'
   >
   <title>Театр драми "Драма"</title>
-  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
-  <link rel="stylesheet" type="text/css" href="/styles/index.css">
+  <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="styles/index.css">
   <script src='index.js' type='text/javascript' defer></script>
+  <script src='form.js' type='text/javascript' defer></script>
 </head>
 <body>
 <header>
   <div class='top-header'>
-    <a href='#'>
+    <a href='index.html'>
       <img
-        src='/static/android-chrome-512x512.png'
+        src='static/android-chrome-512x512.png'
         alt='Театр драми "Драма"'
         width='100'
       >
@@ -46,22 +47,28 @@
   </nav>
 </header>
 <main>
-  <form>
+  <p class='successFormSubmission' id='successmsg'>Ваш відгук відправлено!</p>
+  <form id='form'>
     <div>
       <label for='actor-name'>Оберіть актора: </label>
-      <input id='actor-name' type='text' list='actors'>
+      <input required placeholder='напр. Іван Іванов' name='actors' id='actor-name' type='text' list='actors'>
       <datalist id='actors'>
         <option>Іван Іванов</option>
         <option>Володимир Петров</option>
       </datalist>
     </div>
     <div>
+      <label for='name'>Ваше імʼя:</label>
+      <input placeholder='Напр. Володимир Володимиренко' required type='text' id='name' name='name'>
+    </div>
+    <div>
       <label for='review'>Ваш відгук: </label>
       <div>
-        <textarea id='review'></textarea>
+        <textarea required placeholder='напр "Дуже добре!!!"' name='review' id='review'></textarea>
       </div>
     </div>
     <button>Відправити!</button>
+    <button type='reset'>Очистити</button>
   </form>
 </main>
 <footer>

@@ -104,3 +104,11 @@ ul {
 footer {
     margin-top: 1rem;
 }
+
+.successFormSubmission {
+    display: none;
+}
+
+.visible {
+    display: flex;
+}
