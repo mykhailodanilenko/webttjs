@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang='ua'>
+<head>
+  <meta charset='UTF-8'>
+  <meta
+    name='viewport'
+    content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'
+  >
+  <meta
+    http-equiv='X-UA-Compatible'
+    content='ie=edge'
+  >
+  <title>Театр драми "Драма"</title>
+  <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="styles/index.css">
+  <script src='index.js' type='text/javascript' defer></script>
+  <script src='quiz.js' type='text/javascript' defer></script>
+</head>
+<body>
+<header>
+  <div class='top-header'>
+    <a href='index.html'>
+      <img
+        src='static/android-chrome-512x512.png'
+        alt='Театр драми "Драма"'
+        width='100'
+      >
+    </a>
+    <h1>Театр драми "Драма"</h1>
+  </div>
+  <nav class='main-nav'>
+    <div class='menu-container'>
+      <button class='show-hide-menu-btn' id='menu-btn'>Меню</button>
+      <ul class='menu' id='menu-container'>
+        <li><a href='#'>Головна</a></li>
+        <li><a href='#'>Про театр</a></li>
+        <li><a href='#' class='active'>Тест на справжнього театрала</a></li>
+        <li><a href='/review'>Додати відгук про актора</a></li>
+      </ul>
+    </div>
+    <div>
+      <label for='search-input'>Пошук по сайту: </label>
+      <input class='search-field' id='search-input' type='search'>
+      <button id='search-button'>Шукати</button>
+    </div>
+  </nav>
+</header>
+<main>
+  <form>
+    <div id='step1' class='test-step visible'>
+      <p>
+        Скільки років актор Іван Іванченко працює в нашому театрі?
+      </p>
+      <div>
+        <input type='radio' name='step1' id='question1choice1' value='10'>
+        <label for='question1choice1'>Десять</label>
+      </div>
+      <div>
+        <input type='radio' name='step1' id='question1choice2' value='9'>
+        <label for='question1choice2'>Девʼять</label>
+      </div>
+      <div>
+        <input type='radio' name='step1' id='question1choice3' value='3'>
+        <label for='question1choice3'>Три</label>
+      </div>
+    </div>
+    <div id='step2' class='test-step'>
+      <p>
+        Яка вистава була найпопулярнішою в сезоні 2021-2022 років в нашому театрі?
+      </p>
+      <div>
+        <input type='radio' name='step2' id='question2choice1' value='opt1'>
+        <label for='question2choice1'>"Карʼєра марнотратника"</label>
+      </div>
+      <div>
+        <input type='radio' name='step2' id='question2choice2' value='opt2'>
+        <label for='question2choice2'>"Ляльковий будинок"</label>
+      </div>
+      <div>
+        <input type='radio' name='step2' id='question2choice3' value='opt3'>
+        <label for='question2choice3'>"Пірати карибського моря"</label>
+      </div>
+    </div>
+    <div id='step3' class='test-step'>
+      <fieldset>
+        <legend>Оберіть всі роки в яких наш театр визнавався найкращим в місті</legend>
+        <div>
+          <input type="checkbox" id="2022" name="step3-2022" value="2022" />
+          <label for="2022">2022</label>
+        </div>
+        <div>
+          <input type="checkbox" id="2021" name="step3-2021" value="2021" />
+          <label for="2021">2021</label>
+        </div>
+        <div>
+          <input type="checkbox" id="2020" name="step3-2020" value="2020" />
+          <label for="2020">2020</label>
+        </div>
+        <div>
+          <input type="checkbox" id="2019" name="step3-2019" value="2019" />
+          <label for="2019">2019</label>
+        </div>
+      </fieldset>
+    </div>
+    <div id='results' class='test-step'>
+      <p>Кількість правильних відповідей:</p>
+      <p id='correctAnswersCount'></p>
+      <p>Кількість неправильних відповідей:</p>
+      <p id='incorrectAnswersCount'></p>
+      <p>Тест <span id='passed'></span></p>
+    </div>
+    <button id='continue' type='button'>Продовжити</button>
+  </form>
+</main>
+<footer>
+  <p>Сайт створено студентом групи ІТУз-21-1 Даніленко М.С.</p>
+  <p><a href='/site-review'>Залишити відгук</a></p>
+</footer>
+</body>
+</html>
